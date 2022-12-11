@@ -36,6 +36,8 @@ jobs:
         cd $GITHUB_WORKSPACE
         git clone -b main https://github.com/WangQi107/openwrt-package.git package
         cd package
+        rm -rf *
+        git rm --cache *
         git clone https://github.com/esirplayground/luci-app-poweroff.git ./luci-app-poweroff
         cd luci-app-poweroff
         rm -rf .git LICENSE README.md
