@@ -40,6 +40,15 @@ jobs:
         cd luci-app-poweroff
         rm -rf .git LICENSE README.md
         cd ../
+        git clone https://github.com/sbwml/luci-app-alist.git ./luci-app-alist
+        cd luci-app-alist
+        rm -rf .git .github README.md install.sh
+        cd ../
+        git clone https://github.com/xiangfeidexiaohuo/openwrt-packages.git ./homebox
+        cd homebox
+        mv op-homebox ../luci-app-homebox
+        cd ../
+        rm -rf homebox
         
     - name: Upload
       run: |
