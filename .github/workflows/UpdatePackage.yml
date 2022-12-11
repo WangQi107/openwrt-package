@@ -51,6 +51,10 @@ jobs:
         mv op-homebox ../luci-app-homebox
         cd ../
         rm -rf homebox
+        git clone https://github.com/helmiau/helmiwrt-adds.git ./luci-app-telegrambot
+        cd luci-app-telegrambot
+        rm -rf .git .github build-ipk .gitattributes .gitignore LICENSE README.md
+        cd ../
         
     - name: Upload
       run: |
