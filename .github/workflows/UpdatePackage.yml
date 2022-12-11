@@ -55,6 +55,10 @@ jobs:
         cd luci-app-telegrambot
         rm -rf .git .github build-ipk .gitattributes .gitignore LICENSE README.md
         cd ../
+        git clone https://github.com/ZeaKyX/luci-app-speedtest-web.git ./luci-app-speedtest-web
+        cd luci-app-speedtest-web
+        rm -rf ./git img LICENSE README.md
+        cd ../
         
     - name: Upload
       run: |
