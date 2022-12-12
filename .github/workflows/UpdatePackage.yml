@@ -54,6 +54,10 @@ jobs:
         git clone https://github.com/helmiau/helmiwrt-adds.git ./luci-app-telegrambot
         cd luci-app-telegrambot
         rm -rf .git .github build-ipk .gitattributes .gitignore LICENSE README.md
+        cd packages/net
+        mv telegrambot ../../
+        cd ../../
+        rm -rf packages
         cd ../
         git clone https://github.com/ZeaKyX/luci-app-speedtest-web.git ./luci-app-speedtest-web
         cd luci-app-speedtest-web
