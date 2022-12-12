@@ -61,7 +61,7 @@ jobs:
         cd ../
         git clone https://github.com/ZeaKyX/luci-app-speedtest-web.git ./luci-app-speedtest-web
         cd luci-app-speedtest-web
-        rm -rf ./git img LICENSE README.md
+        rm -rf .git img LICENSE README.md
         cd ../
         
     - name: Upload
