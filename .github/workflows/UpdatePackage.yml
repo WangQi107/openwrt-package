@@ -51,7 +51,7 @@ jobs:
         git clone https://github.com/xiangfeidexiaohuo/openwrt-packages.git ./homeboxcode
         cd homeboxcode/op-homebox
         mv homebox ../../
-        mv luci-app-alist ../../
+        mv luci-app-homebox ../../
         cd ../../
         rm -rf homeboxcode
         git clone https://github.com/helmiau/helmiwrt-adds.git ./telegrambotcode
