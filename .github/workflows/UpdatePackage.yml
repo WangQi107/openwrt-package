@@ -42,26 +42,29 @@ jobs:
         cd luci-app-poweroff
         rm -rf .git LICENSE README.md
         cd ../
-        git clone https://github.com/sbwml/luci-app-alist.git ./luci-app-alist
-        cd luci-app-alist
-        rm -rf .git .github README.md install.sh
+        git clone https://github.com/sbwml/luci-app-alist.git ./alistcode
+        cd alistcode
+        mv alist ../
+        mv luci-app-alist ../
         cd ../
-        git clone https://github.com/xiangfeidexiaohuo/openwrt-packages.git ./homebox
-        cd homebox
-        mv op-homebox ../luci-app-homebox
-        cd ../
-        rm -rf homebox
-        git clone https://github.com/helmiau/helmiwrt-adds.git ./luci-app-telegrambot
-        cd luci-app-telegrambot
-        rm -rf .git .github build-ipk .gitattributes .gitignore LICENSE README.md
-        cd packages/net
-        mv telegrambot ../../
+        rm -rf alistcode
+        git clone https://github.com/xiangfeidexiaohuo/openwrt-packages.git ./homeboxcode
+        cd homeboxcode/op-homebox
+        mv homebox ../../
+        mv luci-app-alist ../../
         cd ../../
-        rm -rf packages
-        cd ../
+        rm -rf homeboxcode
+        git clone https://github.com/helmiau/helmiwrt-adds.git ./telegrambotcode
+        cd telegrambotcode/packages/net
+        mv telegrambot ../../../
+        cd ../../luci
+        mv luci-app-telegrambot ../../
+        cd ../../
+        rm -rf telegrambotcode
         git clone https://github.com/ZeaKyX/luci-app-speedtest-web.git ./luci-app-speedtest-web
         cd luci-app-speedtest-web
         rm -rf .git img LICENSE README.md
+        cd ../
         git clone https://github.com/ZeaKyX/speedtest-web.git
         cd speedtest-web
         rm -rf .git LICENSE README.md
