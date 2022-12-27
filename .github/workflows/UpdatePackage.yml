@@ -1,8 +1,8 @@
 name: Update packages
 
 on:
-  schedule:
-    - cron: 0 */24 * * *
+  #schedule:
+    #- cron: 0 */24 * * *
   watch:
     types: started
   workflow_dispatch:
