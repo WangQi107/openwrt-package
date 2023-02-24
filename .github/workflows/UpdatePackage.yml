@@ -69,6 +69,10 @@ jobs:
         cd speedtest-web
         rm -rf .git LICENSE README.md
         cd ../../
+        git clone https://github.com/sirpdboy/luci-app-autotimeset.git ./luci-app-autotimeset
+        cd luci-app-autotimeset
+        rm -rf .git LICENSE README.md
+        cd ../
         
     - name: Upload
       run: |
